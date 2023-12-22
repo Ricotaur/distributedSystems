@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-frontend';
+  todos : string[] = ['water plants','read the news','cook something new','work','work harder','','','','','','','','']
 }
