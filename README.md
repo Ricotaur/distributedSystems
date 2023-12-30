@@ -2,9 +2,12 @@
 
 ## Overview
 
-This repository contains the source code for a FullStack Application.
-The RESTful API backend made with NestJS manages a list of TODO items and interacts with a MySQL Database. The API provides endpoints for listing, creating, updating, and deleting TODO items.
-The Web Frontend is made with Angular.
+This repository contains the source code for a FullStack Application. 
+
+The RESTful API backend is made with NestJS and manages a list of TODO items and interacts with a MySQL Database. The API provides endpoints for listing, creating, updating, and deleting TODO items. 
+
+The Web Frontend is made with Angular. 
+
 
 ## API Endpoints
 
