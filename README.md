@@ -66,4 +66,9 @@ To run the application and its associated MySQL database using Docker Compose, f
    ```bash
    docker-compose up -d
 
-6. The Frontend will be available to interact at `localhost:3000`. 
+6. The Frontend will be available to interact at `localhost:4200`.
+
+## Ports
+- `4200` - Angular Frontend
+- `3000` - NestJS Backend
+- `3306` - MySQL Database
