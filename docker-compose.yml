@@ -1,15 +1,16 @@
 version: '3.8'
 
 services:
+
   # Frontend Service
   frontend:
     build:
       context: ./todo-frontend 
     ports:
-      - "4200:4200"
-    restart: always
-    depends_on:
-      - backend
+      - 4200:4200
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     command: npm start
 
   # Backend Service
@@ -21,20 +22,16 @@ services:
     depends_on:
       - database
     environment:
-      DATABASE_HOST: database
-      DATABASE_PORT: 3306
-      DATABASE_USER: root
-      DATABASE_PASSWORD: root
-      DATABASE_NAME: todo_database
+      DATABASE_URL: postgres://root:rootpw@postgres:5432/db
     command: npm run start
 
-  # MySQL Database Service
+  # Postgres Database Service
   database:
-    image: mysql:latest
-    ports:
-      - "3366:3306"
+    image: postgres
+    container_name: postgres
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: todo_database
-      MYSQL_USER: rootusr
-      MYSQL_PASSWORD: root
+      POSTGRES_PASSWORD: rootpw
+      POSTGRES_USER: root
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"
