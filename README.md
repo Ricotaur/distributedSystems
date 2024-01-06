@@ -4,7 +4,7 @@
 
 This repository contains the source code for a FullStack Application. 
 
-The RESTful API backend is made with NestJS and manages a list of TODO items and interacts with a MySQL Database. The API provides endpoints for listing, creating, updating, and deleting TODO items. 
+The RESTful API backend is made with NestJS and manages a list of TODO items and interacts with a Postgres Database. The API provides endpoints for listing, creating, updating, and deleting TODO items. 
 
 The Web Frontend is made with Angular. 
 
@@ -50,12 +50,8 @@ To run the application, follow these steps:
 1. Clone this repository to your local machine.
 2. Build and run the project using a IDE or the command line.
 
-### Configuration
-
-You can configure the application by modifying the application properties or configuration files as needed.
-
 ## Usage
-To run the application and its associated MySQL database using Docker Compose, follow these steps:
+To run the application and its associated Postgres database using Docker Compose, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Make sure you have Docker and Docker Compose installed.
@@ -74,4 +70,4 @@ To run the application and its associated MySQL database using Docker Compose, f
 ## Ports
 - `4200` - Angular Frontend
 - `3000` - NestJS Backend
-- `3306` - MySQL Database
+- `5432` - Postgres Database
